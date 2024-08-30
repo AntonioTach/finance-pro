@@ -24,6 +24,7 @@ const config = {
           1: "rgba(255, 255, 255, 0.10)",
         },
         bankGradient: "#6E4F95",
+        bankGradient2: "#C7B8D2",
         indigo: {
           500: "#6172F3",
           700: "#3538CD",
@@ -70,7 +71,7 @@ const config = {
         },
       },
       backgroundImage: {
-        "bank-gradient": "linear-gradient(90deg, #0179FE 0%, #4893FF 100%)",
+        "bank-gradient": "linear-gradient(90deg, #6A0DAD 0%, #B19CD9 100%)",
         "gradient-mesh": "url('/icons/gradient-mesh.svg')",
         "bank-green-gradient":
           "linear-gradient(90deg, #01797A 0%, #489399 100%)",
