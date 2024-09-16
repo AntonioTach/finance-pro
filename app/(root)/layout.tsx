@@ -16,7 +16,7 @@ export default function RootLayout({
       <div className="flex size-full flex-col">
         <div className="root-layout">
           <Image
-            src={"/icons/logo.svg"}
+            src={"/icons/udb.png"}
             width={30}
             height={30}
             alt="logo"

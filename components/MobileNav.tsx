@@ -34,10 +34,11 @@ function MobileNav({ user }: MobileNavProps) {
          href='/' 
          className='cursor-pointer items-center gap-1 px-4 flex'>
           <Image 
-           src='/icons/logo.svg' 
+           src='/icons/udb.png' 
            alt='logo' 
            width={34} 
            height={34}
+           className="m-2"
           />
           <h1 className='text-26 font-ibm-plex-serif font-bold text-black-1'>FinancePro</h1>
         </Link>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "FinancePro",
   description: "FinancePro is a finance management app with modern banking platform.",
   icons: {
-    icon: "/icons/icon.svg",
+    icon: "/icons/icon.png",
   }
 };
 

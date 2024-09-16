@@ -25,6 +25,7 @@ const config = {
         },
         bankGradient: "#6E4F95",
         bankGradient2: "#C7B8D2",
+        bankGradient3: "#a855f7",
         indigo: {
           500: "#6172F3",
           700: "#3538CD",
@@ -71,7 +72,7 @@ const config = {
         },
       },
       backgroundImage: {
-        "bank-gradient": "linear-gradient(90deg, #6A0DAD 0%, #B19CD9 100%)",
+        "bank-gradient": "linear-gradient(90deg, #a855f7 0%, #B19CD9 100%)",
         "gradient-mesh": "url('/icons/gradient-mesh.svg')",
         "bank-green-gradient":
           "linear-gradient(90deg, #01797A 0%, #489399 100%)",
