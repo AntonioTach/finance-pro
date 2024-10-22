@@ -52,8 +52,9 @@ const AuthForm = ({ type }: { type: authTypes }) => {
 
         // if (response) router.push('/')
       } else if (type === authTypes.SIGN_UP) {
-        // const newUser = await signUp(values);
-        // setUser(newUser)
+        const newUser = await signUp(values);
+        
+        setUser(newUser)
       }
     } catch (error) {
     } finally {
