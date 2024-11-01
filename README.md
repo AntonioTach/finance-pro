@@ -1,3 +1,6 @@
+# Finance Pro
+FinancePro is a finance management app with modern banking platform that help you manage your money, meet your financial goals, and learn how to invest.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

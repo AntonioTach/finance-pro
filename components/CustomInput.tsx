@@ -12,9 +12,10 @@ interface CustomInput {
   label: string;
   placeholder: string;
   type: string;
+  style?: React.CSSProperties;
 }
 
-function CustomInput({ control, name, label, placeholder, type }: CustomInput) {
+function CustomInput({ control, name, label, placeholder, type, style }: CustomInput) {
   return (
     <FormField
       control={control}
@@ -28,6 +29,7 @@ function CustomInput({ control, name, label, placeholder, type }: CustomInput) {
                 placeholder={placeholder}
                 className="input-class"
                 type={type}
+                style={style}
                 {...field}
               />
             </FormControl>

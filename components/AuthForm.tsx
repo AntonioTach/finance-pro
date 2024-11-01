@@ -7,20 +7,12 @@ import { useForm } from 'react-hook-form';
 import { set, z } from 'zod';
 
 import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+import { Form } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import CustomInput from './CustomInput';
 import { authFormSchema, authTypes } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { signIn, signUp } from '@/lib/actions/user.actions';
 
 const AuthForm = ({ type }: { type: authTypes }) => {
@@ -40,8 +32,6 @@ const AuthForm = ({ type }: { type: authTypes }) => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsLoading(true);
-    console.log(values);
-
     try {
       // Sign up with Appwrite and create plaid token
       if (type === authTypes.SIGN_IN) {
@@ -50,11 +40,11 @@ const AuthForm = ({ type }: { type: authTypes }) => {
           password: values.password,
         });
 
-        // if (response) router.push('/')
+        if (response) router.push('/')
       } else if (type === authTypes.SIGN_UP) {
         const newUser = await signUp(values);
-        
-        setUser(newUser)
+
+        setUser(newUser);
       }
     } catch (error) {
     } finally {
@@ -147,13 +137,22 @@ const AuthForm = ({ type }: { type: authTypes }) => {
                       name="dateOfBirth"
                       label="Date of Birth"
                       placeholder="yyyy-mm-dd"
-                      type="text"
+                      type="Date"
+                      style={{
+                        width: '200px',
+                        height: '40px',
+                        padding: '0 15px',
+                        paddingRight: '5px',
+                        boxSizing: 'border-box',
+                        textAlign: 'left',
+                        appearance: 'none',
+                      }}
                     />
                     <CustomInput
                       control={form.control}
                       name="ssn"
                       label="SSN"
-                      placeholder="Example: 1234"
+                      placeholder="Example: 12334"
                       type="text"
                     />
                   </div>

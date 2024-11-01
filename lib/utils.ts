@@ -230,7 +230,13 @@ export const authFormSchema = (type: authTypes) =>
     password: z.string().min(8),
   });
 
-export enum authTypes {
-  SIGN_IN = 'sign-in',
-  SIGN_UP = 'sign-up',
-}
+  export enum authTypes {
+    SIGN_IN = 'sign-in',
+    SIGN_UP = 'sign-up',
+  }
+  
+  export enum deviceType {
+    MOBILE = 'mobile',
+    DESKTOP = 'desktop',
+  }
+
