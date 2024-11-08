@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import Footer from './Footer';
+import { SiderbarProps } from '@/types';
 
 const Sidebar = ({ user }: SiderbarProps) => {
   const pathName = usePathname();
