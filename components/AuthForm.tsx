@@ -39,7 +39,7 @@ const AuthForm = ({ type }: { type: authTypes }) => {
           email: values.email,
           password: values.password,
         });
-        if (response) router.push('/')
+        if (response) router.push('/');
       } else if (type === authTypes.SIGN_UP) {
         const newUser = await signUp(values);
 

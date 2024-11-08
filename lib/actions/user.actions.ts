@@ -1,15 +1,15 @@
 'use server';
 
-import { ID } from "node-appwrite";
-import { createAdminClient, createSessionClient } from "../server/appwrite";
-import { cookies } from "next/headers";
-import { parseStringify } from "../utils";
-import { LoginUser, SignUpParams } from "@/types";
+import { ID } from 'node-appwrite';
+import { createAdminClient, createSessionClient } from '../server/appwrite';
+import { cookies } from 'next/headers';
+import { parseStringify } from '../utils';
+import { LoginUser, SignUpParams } from '@/types';
 
 // Mutations / Database / Make fetch request to Appwrite
 
 export const signIn = async (login: LoginUser) => {
-  const { email, password } = login
+  const { email, password } = login;
   try {
     const { account } = await createAdminClient();
 
@@ -27,18 +27,18 @@ export const signUp = async (userData: SignUpParams) => {
     const { account } = await createAdminClient();
 
     const newUserAccount = await account.create(
-      ID.unique(), 
-      email, 
-      password, 
+      ID.unique(),
+      email,
+      password,
       `${firstName} ${lastName}`
     );
 
     const session = await account.createEmailPasswordSession(email, password);
-  
-    cookies().set("appwrite-session", session.secret, {
-      path: "/",
+
+    cookies().set('appwrite-session', session.secret, {
+      path: '/',
       httpOnly: true,
-      sameSite: "strict",
+      sameSite: 'strict',
       secure: true,
     });
 
@@ -68,4 +68,4 @@ export const logout = async () => {
   } catch (error) {
     return null;
   }
-}
+};

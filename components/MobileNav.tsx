@@ -88,7 +88,7 @@ function MobileNav({ user }: MobileNavProps) {
                 USER
               </nav>
             </SheetClose>
-            
+
             <Footer user={user} type={deviceType.MOBILE} />
           </div>
         </SheetContent>

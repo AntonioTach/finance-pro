@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import { deviceType } from "@/lib/utils";
+import { deviceType } from '@/lib/utils';
 
 declare type SearchParamProps = {
   params: { [key: string]: string };
@@ -330,5 +330,3 @@ declare interface getBankProps {
 declare interface getBankByAccountIdProps {
   accountId: string;
 }
-
-

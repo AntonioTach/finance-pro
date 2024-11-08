@@ -15,7 +15,14 @@ interface CustomInput {
   style?: React.CSSProperties;
 }
 
-function CustomInput({ control, name, label, placeholder, type, style }: CustomInput) {
+function CustomInput({
+  control,
+  name,
+  label,
+  placeholder,
+  type,
+  style,
+}: CustomInput) {
   return (
     <FormField
       control={control}
