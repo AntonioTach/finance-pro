@@ -42,3 +42,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Appwrite
 
 This project is integrated with [Appwrite](https://appwrite.io/), an open-source backend server that helps you build modern applications much faster with real-time APIs for authentication, databases, files storage, and much more.
+
+## SENTRY
+
+This project is integrated with [Sentry](https://sentry.io/), an open-source error tracking tool that helps you monitor and fix crashes in real-time. Sentry provides a wide range of SDKs and plugins to help you monitor your app in production.
