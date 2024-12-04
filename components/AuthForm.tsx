@@ -35,6 +35,8 @@ const AuthForm = ({ type }: { type: authTypes }) => {
     setIsLoading(true);
     try {
       // Sign up with Appwrite and create plaid token
+      
+
       if (type === authTypes.SIGN_IN) {
         const response = await signIn({
           email: values.email,
@@ -42,7 +44,20 @@ const AuthForm = ({ type }: { type: authTypes }) => {
         });
         if (response) router.push('/');
       } else if (type === authTypes.SIGN_UP) {
-        const newUser = await signUp(values);
+        const userData = {
+          firstName: values.firstName!,
+          lastName: values.lastName!,
+          address1: values.address1!,
+          city: values.city!,
+          state: values.state!,
+          postalCode: values.postalCode!,
+          dateOfBirth: values.dateOfBirth!,
+          ssn: values.ssn!,
+          email: values.email!,
+          password: values.password!,
+        }
+
+        const newUser = await signUp(userData);
 
         setUser(newUser);
       }
