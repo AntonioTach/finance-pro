@@ -45,4 +45,8 @@ This project is integrated with [Appwrite](https://appwrite.io/), an open-source
 
 ## SENTRY
 
-This project is integrated with [Sentry](https://sentry.io/), an open-source error tracking tool that helps you monitor and fix crashes in real-time. Sentry provides a wide range of SDKs and plugins to help you monitor your app in production.
+This project is integrated with [Sentry](https://sentry.io/), an open-source error tracking tool that helps you monitor and fix crashes in real-time. Sentry provides a wide range of SDKs and plugins to help you monitor your app in production
+
+## PLAID
+
+This project is integrated with [Plaid](https://plaid.com/), a technology platform that enables applications to connect with users' bank accounts. Plaid focuses on lowering the barriers to entry in financial services by making it easier and safer to use financial data.
