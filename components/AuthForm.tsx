@@ -44,6 +44,7 @@ const AuthForm = ({ type }: { type: authTypes }) => {
         });
         if (response) router.push('/');
       } else if (type === authTypes.SIGN_UP) {
+        console.log(values);
         const userData = {
           firstName: values.firstName!,
           lastName: values.lastName!,
@@ -98,11 +99,11 @@ const AuthForm = ({ type }: { type: authTypes }) => {
           </h1>
         </div>
       </header>
-      {/* {user ? ( */}
+      {user ? (
         <div className="flex flex-col gap-4">
           <PlaidLink user={user} variant="primary" />
         </div>
-      {/* ) : ( */}
+      ) : (
         <>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -222,7 +223,7 @@ const AuthForm = ({ type }: { type: authTypes }) => {
             </Link>
           </footer>
         </>
-      {/* )} */}
+      )}
     </section>
   );
 };

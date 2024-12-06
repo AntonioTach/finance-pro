@@ -40,8 +40,8 @@ export const signIn = async (login: LoginUser) => {
   }
 };
 
-export const signUp = async (userData: SignUpParams) => {
-  const { email, password, firstName, lastName } = userData;
+export const signUp = async ({password, ...userData}: SignUpParams) => {
+  const { email, firstName, lastName } = userData;
 
   let newUserAccount;
   try {

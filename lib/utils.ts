@@ -218,7 +218,7 @@ export const authFormSchema = (type: authTypes) =>
       type === authTypes.SIGN_UP ? z.string().max(50) : z.string().optional(),
     state:
       type === authTypes.SIGN_UP
-        ? z.string().min(3).max(3)
+        ? z.string().min(2).max(4)
         : z.string().optional(),
     postalCode:
       type === authTypes.SIGN_UP
